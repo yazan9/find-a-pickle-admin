@@ -1,0 +1,23 @@
+<div class="text-center signin-container">
+    <div>
+        <form class="form-signin" (ngSubmit)="login()" #loginForm="ngForm">
+            <!-- <img class="mb-4 fts-logo" src="/assets/images/fts_logo.png" alt=""> -->
+            <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+
+            <label for="inputEmail" class="sr-only">Email address</label>
+            <input name="email" [(ngModel)]="credentials.email" type="email" id="inputEmail" class="form-control mb-2" 
+            placeholder="Email address" required autofocus="">
+
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input name="password" [(ngModel)]="credentials.password" type="password" id="inputPassword" class="form-control mb-2" 
+            placeholder="Password" required>
+
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+            <div class="mt-5 mb-3">
+                New? Register <a [routerLink]="'/signup'">here</a>
+            </div>
+            <p class="mt-5 mb-3 text-muted">© 2020</p>
+          </form>
+    </div>
+    
+</div>
